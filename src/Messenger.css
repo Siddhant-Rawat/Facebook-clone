@@ -1,0 +1,157 @@
+.messenger {
+  flex: 1;
+  background-color: white;
+  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  margin: 20px;
+  height: 83vh;
+}
+
+.messenger__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+:fullscreen .messenger__header {
+  height: 10vh;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__left > img {
+  height: 40px;
+}
+
+.header__right {
+  font-weight: 500;
+  padding-right: 20px;
+}
+
+.messenger__input {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+  bottom: 25px;
+  position: sticky;
+  z-index: 100;
+}
+
+.messenger__input > form {
+  display: flex;
+  flex: 0.98;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+:fullscreen .messenger__input > form {
+  flex: 1;
+}
+
+.messenger__input > form > div {
+  background-color: #f1f2f5;
+  padding: 15px;
+  border-radius: 20px;
+  border: 0;
+  flex: 0.95;
+  cursor: auto;
+  /* to break a single word into multiple lines. Like if you write one single word w/o space, 
+  with below property it itself breaks into new line upon reaching the div's width, otherwise
+  it changes the div's width(makes it large as we type) */
+  word-break: break-word;
+}
+
+.messenger__input:fullscreen {
+  background-color: #f1f2f5;
+}
+
+.messenger__input > form > div:focus {
+  outline: none;
+}
+
+[contentEditable="true"]:empty:before {
+  content: attr(data-text);
+  color: gray;
+}
+
+.messenger__input > form > button {
+  border: 0;
+  background-color: white;
+  margin-right: 20px;
+}
+
+.messenger__input > form > button:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.messenger__body {
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.body__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.body__image > img {
+  height: 50px;
+}
+
+.body__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.body__text > p {
+  font-weight: 350;
+}
+
+.body__text > button {
+  background-color: white;
+  border: 1px solid rgb(168, 168, 168);
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.body__text > button:hover {
+  cursor: pointer;
+  background-color: #2e81f4;
+  color: white;
+}
+
+:fullscreen .messenger__body {
+  height: 75vh;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
+}
+
+.btn > button {
+  background-color: white;
+  cursor: pointer;
+  border: 0px;
+}
+
+.btn > button:hover {
+  border: 1px solid rgb(219, 219, 219);
+}

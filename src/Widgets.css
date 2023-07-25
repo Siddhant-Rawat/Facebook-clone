@@ -1,0 +1,13 @@
+.widgets {
+  flex: 0.25;
+  padding: 0px 5px;
+  position: sticky;
+  top: 75px;
+  height: 500px;
+}
+
+.widgets > h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: gray;
+}
